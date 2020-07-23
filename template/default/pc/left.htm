@@ -1,0 +1,30 @@
+<div class="sidel fl hidden-xs">
+        <div class="pagemenu">
+          <div class="title tc"> <i class="pline"></i> {$eyou.field.typeid|gettoptype=###,'typename'} <i class="pline"></i> </div>
+          <ul>
+          {eyou:channel type="first" currentstyle="current" id="field" row='20'}
+            <li class="{$field.currentstyle}"> <a  {eyou:notempty name="$field.children"}href="javascript:;"{/eyou:notempty} href="{$field.typeurl}" >{$field.typename}{eyou:notempty name="$field.children"}<div class="btnicon"><img src="{eyou:global name='web_templets_pc' /}/skin/img/iconsider.png" class="on"><img src="{eyou:global name='web_templets_pc' /}/skin/img/iconsided.png" class="icond"></div>{/eyou:notempty}
+              </a>
+              {eyou:notempty name="$field.children"}
+              <ul class='secondul' style="display:none">
+              {eyou:channel name="$field.children" id="field2"}
+                <li class="square"><a href="{$field2.typeurl}" >{$field2.typename}</a></li>
+              {/eyou:channel}
+              </ul>
+              {/eyou:notempty}
+            </li>
+          {/eyou:channel} 
+          </ul>
+        </div>
+        <div class="pageus">
+          <div class="title tc"> <i class="pline"></i> 联系我们 <i class="pline"></i> </div>
+          <div class="usimg"> <img src="{eyou:global name='web_attr_9' /}" alt=""> 
+          </div>
+          <div class="wds">
+           <span class="cl"> <a class="fl">地址：</a><a class="adr fl">{eyou:global name='web_attr_4' /}</a> </span> 
+           <span>联系人：{eyou:global name='web_attr_3' /}</span> 
+		    <span>手机：{eyou:global name='web_attr_7' /}</span> 
+           <span>咨询热线：{eyou:global name='web_attr_1' /} </span> 
+         </div>
+        </div>
+      </div>

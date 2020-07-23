@@ -1,0 +1,498 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>{eyou:global name='web_title' /}</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta name="description" content="{eyou:global name='web_description' /}" />
+<meta name="keywords" content="{eyou:global name='web_keywords' /}" />
+<link href="{eyou:global name='web_cmspath' /}/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<meta content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=no, width=device-width" name="viewport" />
+{eyou:static file="skin/js/jquery-1.10.1.min.js" /}
+{eyou:static file="skin/js/state.js" /}
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/font-awesome.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/global.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/widget.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/variouscomponents.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/images.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/theme.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/color_0.css">
+<link href="{eyou:global name='web_templets_pc' /}/skin/css/master.css" rel="stylesheet">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/you.css">
+{eyou:static file="skin/css/bootstrap.min.css" /}
+{eyou:static file="skin/css/slick.css" /}
+{eyou:static file="skin/css/style.css" /}
+
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.min.js"></script>
+
+
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/public.js"></script>
+
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/base.js"></script>
+<link href="{eyou:global name='web_templets_pc' /}/skin/css/lightbox.min.css" rel="stylesheet"> 
+
+
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/common.js"></script>  
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/theme.js"></script>  
+
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/layer.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/language.js"></script> 
+
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.formsvalidation.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.nodecommon.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/extend.js"></script>
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/animate.min.css">
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/animate.min.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/components.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.menu_style.js"></script>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.init.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.superslide.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.SuperSlide.2.1.1.js"></script>
+{eyou:static file="skin/js/slick.min.js" /}
+{eyou:static file="skin/js/bootstrap.min.js" /}
+<script type="text/javascript">
+$(function(){
+    dataAnimate();
+    (function($,lanno){
+        if(lanno === "" || lanno === "default"){
+            return '';
+        }
+        $(".w-languege").each(function(){
+            $(this).find("a").each(function(){
+                if($(this).data("lanno") === lanno){
+                    $(this).addClass("cur");
+                }else{
+                    if($(this).hasClass("cur")){
+                        $(this).removeClass("cur");
+                    }
+                }
+            });
+        });
+    })(jQuery,"cn");
+});
+</script>
+</head>
+<body>
+<div class="body"> {eyou:include file="header.htm" /}
+  <section class="w-container bannerBox ">
+    <div class="banner">
+      <ul class="bxslider">
+        {eyou:adv pid='1' }
+        <li> <img src="{$field.litpic}" alt="{$field.title}" title="{$field.title}"
+                             style=""  
+                             /> <a href="javascript:void(0);" target="_self"><span  style="display:none;">none</span></a> </li>
+        {/eyou:adv}
+      </ul>
+      <script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.bxslider.js"></script>
+      <link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/jquery.bxslider.css">
+      <script type="text/javascript">
+            var scale = '';
+            var speed = 500;
+            var pause = 5;
+            $(function () {
+                $('.banner>ul').bxSlider({
+                    mode: 'fade', /*滚动方式 fade、vertical、horizontal */
+                    auto: true, /*自动滚动*/
+                    autoControls: false, /*自动滚动按钮*/
+                    infiniteLoop: true, /*循环滚动*/
+                    hideControlOnEnd: true, /*无效按钮隐藏*/
+                    adaptiveHeight: true, /*图片是否实际缩放比高度显示控制，图片比例不一样高度变化*/
+                    minSlides: 1,
+                    maxSlides: 2,
+                    scale: scale,
+                    speed: speed,
+                    pause: pause * 1000
+                });
+            });
+        </script> 
+    </div>
+  </section>
+  
+  <!--产品中心-->
+  {eyou:channelartlist typeid='3'}
+   <!-- 自定义产品中心-->
+   <section class=" text-xs-center" style="background-color:#f65607 ;width: 100%;padding: 30px 0;">
+       <div class="container">
+           <div class="col-lg-3 text-lg-center" style="color: #fff;">
+  					<div class="pro-cont" >
+  						<h2 style="color: #fff;">{eyou:field name='typename' /}</h2>
+  						<h4 style="color: #fff;">ABOUT US</h4>
+  						<div class="text-lg-left font-size-16">
+  							{eyou:field name='seo_description' /}
+  						</div>
+  						<span  style="display: inline-block; border: 1px solid #fff;padding: 5px;margin-top: 10px;">
+  						<a href="{eyou:field name='typeurl' /}" style="color: #fff;">查看更多</a>
+  						</span>			
+  					</div>
+           </div>
+           <div class="col-lg-9 " style="padding: 28px;">
+			  
+  						<div class="pro-view col-xs-12" style="width: 24%;">
+  							<div style="float: left;">
+  								<div class="pro-tit">钛棒</div>
+  							<span><a href="{$field.typeurl}"><查看更多></a></span>
+  							</div>
+  							<div style="float: right;">
+  								<img src="template/default/pc/skin/img/001.png" alt="钛棒" >
+  							</div>
+  						</div>
+						<div class="pro-view col-xs-12" style="width: 24%;">
+							<div style="float: left;">
+								<div class="pro-tit">钛板</div>
+							<span><a href="{$field.typeurl}"><查看更多></a></span>
+							</div>
+							<div style="float: right;">
+								<img src="template/default/pc/skin/img/002.png" alt="钛板" >
+							</div>
+						</div>
+						<div class="pro-view col-xs-12" style="width: 24%;">
+							<div style="float: left;">
+								<div class="pro-tit">钛管</div>
+							<span><a href="{$field.typeurl}"><查看更多></a></span>
+							</div>
+							<div style="float: right;">
+								<img src="template/default/pc/skin/img/003.png" alt="钛管" >
+							</div>
+						</div>
+						<div class="pro-view col-xs-12" style="width: 24%;">
+							<div style="float: left;">
+								<div class="pro-tit">钛丝</div>
+							<span><a href="{$field.typeurl}"><查看更多></a></span>
+							</div>
+							<div style="float: right;">
+								<img src="template/default/pc/skin/img/004.png" alt="钛丝" >
+							</div>
+						</div>
+						<div>
+					<div class="pro-view col-xs-12" style="width: 24%; margin-left:90px;">
+						<div style="float: left;">
+							<div class="pro-tit">钛锻件</div>
+						<span><a href="{$field.typeurl}"><查看更多></a></span>
+						</div>
+						<div style="float: right;">
+							<img src="template/default/pc/skin/img/005.png" alt="钛锻件" >
+						</div>
+					</div>
+					<div class="pro-view col-xs-12" style="width: 24%;">
+						<div style="float: left;">
+							<div class="pro-tit">钛加工件</div>
+						<span><a href="{$field.typeurl}"><查看更多></a></span>
+						</div>
+						<div style="float: right;">
+							<img src="template/default/pc/skin/img/006.png" alt="钛加工件" >
+						</div>
+					</div>
+					<div class="pro-view col-xs-12" style="width: 24%;">
+						<div style="float: left;">
+							<div class="pro-tit">钛标准件</div>
+						<span><a href="{$field.typeurl}"><查看更多></a></span>
+						</div>
+						<div style="float: right;">
+							<img src="template/default/pc/skin/img/007.png" alt="钛标准件" >
+						</div>
+					</div>
+				</div>
+  						
+           </div>
+       </div>
+   </section>
+   <!-- 自定义产品中心-->
+     {/eyou:channelartlist}
+ 
+      <!--产品中心-->
+    <!-- productCener_start -->
+    {eyou:channelartlist typeid='3'}
+	<div class="pro">
+    <div class="w-section "> 
+      <div class="row" >
+        <div class="row-mask" ></div>
+        <div class="wrap-content-in  ">
+          <div class="li-div">
+            <div class="not-animated w-text" data-animate="" style="">
+              <div class="w-title w-title1">
+                <div class="w-title-in">
+                  <div class="w-title-inner">
+                    <div class="title-h-in title-word">
+                      <h1 class="color_main color_h">产品推荐</h1>
+                      <!--<span class="color_vice color_span">{eyou:field name='seo_description' /}</span>-->
+                      <div class="title_line"></div>
+					   <div class="title_eng">
+						 Products Recommended
+					   </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+            </div>
+          </div>
+		  
+		  <!--产品分类结束-->
+		  <div class="view-port">
+		    <ul class="slider-container" style="float: left;width: 1204px;">
+		      {eyou:arclist row="8" titlelen='30' infolen='30' flag='c'}
+		      <li class="item" style="float: left;width: 294px;height: 285px;display: inline;margin: 0 0 0 4px;"> <a href="{$field.arcurl}" title="{$field.title}" class="proimg"><img style="padding: 3px;background-color: #f65607;" src="{$field.litpic}" alt="{$field.title}" width="273" height="248" />
+		        <p class="proname1">{$field.title}</p>
+		       </a> </li>
+		      {/eyou:arclist}
+		    </ul>
+		  </div>
+
+	</div>
+    {/eyou:channelartlist}
+    <!-- productCener_end -->
+	
+	<!--公司简介-->
+	 {eyou:channelartlist typeid='1'}
+	<div class="w-container w-main">
+	  <div class="w-section company">
+	    <div class="row" >
+	      <div class="row-mask" ></div>
+	      <div class="wrap-content-in  ">
+	        <div class="li-div">
+	          <div class="not-animated w-text" data-animate="" style="">
+	            <div class="w-title w-title1">
+	              <div class="w-title-in">
+	                <div class="w-title-inner">
+	                  <div class="title-h-in">
+	                    <h1 class="color_main color_h">{eyou:field name='typename' /}</h1>
+	                    <!--<span class="color_vice color_span">{eyou:field name='seo_description' /}</span>-->
+	                 <div class="title_line"></div>
+	                  <div class="title_eng">
+	                 		{eyou:field name='englist_name' /}
+	                  </div>
+	                  </div>
+	                </div>
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	        <!--<div class="li-div">
+	          <div class="w-space space-b noChoose"  style="height:60px;">
+	            <div class="stretch-b"></div>
+	          </div>
+	        </div>-->
+	        <div class="li-div col-li-div">
+	          <div class="col-table">
+	            <table class="div-table div-table-first" width="100%" cellspacing="0" cellpadding="0" border="0">
+	              <tbody>
+	                <tr>
+	                  <td class="td-w" width="50%"><div class="div-padding">
+	                      <div class="li-div">
+	                        <div class="not-animated w-simImg" data-animate="" style="cursor:pointer;text-align:center;padding-top:20px;">
+	                          <div class="image-w"> <a title="" style="cursor:default;" href="javascript:void(0);" >
+	                            <div class="img" > <img src="{eyou:field name='litpic' /}"  /> </div>
+	                            <div class="caption w-img-caption">
+	                              <div class="captionbg"></div>
+	                            </div>
+	                            </a> </div>
+	                        </div>
+	                      </div>
+	                    </div></td>
+	                  
+	                  <td class="td-w" width="50%"><div class="div-padding">
+	                      <div class="li-div">
+	                        <div class="not-animated w-text" data-animate="" style="">
+	                          <p><span style="font-size:24px;font-weight:bold;">{eyou:global name='web_name' /}</span><br/>
+	                            <span style="color:#a4a4a4;"></span></p>
+	                          {eyou:type addtable='single_content' typeid='1'}
+	                          {$field.content|html_msubstr=###,0,255}...
+	                          {/eyou:type} </div>
+	                      </div>
+	                      <div class="li-div">
+	                        <div class="not-animated w-button" data-animate="" style="padding-top:20px;">
+	                          <div style="background-color: #f65607 ;border-radius: 5px;" class=" btn-default-w btn-large-w g-click-to-link" onclick="window.open('{eyou:field name='typeurl' /}','_self')"> <span class="btn-inner" style="color: #fff ;">查看更多</span> </div>
+	                          <a style="display:none;" href="{eyou:field name='typeurl' /}" ><span ></span></a> 
+						<!-- 	  <div style="background-color: #3b5d7f ;border-radius: 5px;margin-left: 20px;" class=" btn-default-w btn-large-w g-click-to-link" onclick="window.open('{eyou:field name='typeurl' /}','_self')"> <span class="btn-inner" style="color: #fff ;">发展历程</span> </div>
+							  <a style="display:none;" href="{eyou:field name='typeurl' /}" ><span ></span></a> 
+							  
+							  </div> -->							  
+	                      </div>
+	                    </div></td>
+	                   </tr>
+	              </tbody>
+	            </table>
+	          </div>
+	        </div>
+	        <div class="li-div">
+	          <div class="w-space space-b noChoose"  style="height:45px;">
+	            <div class="stretch-b"></div>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	     </div>
+	     {/eyou:channelartlist}
+
+      <!--公司优势-->
+<div style=" height: auto; margin: 0px auto;">
+	<div class="li-div">
+	  <div class="not-animated w-text" data-animate="" style="">
+	    <div class="w-title w-title1">
+	      <div class="w-title-in">
+	        <div class="w-title-inner">
+	          <div class="title-h-in">
+	            <h1 class="color_main color_h">福泽优势</h1>
+	            <!--<span class="color_vice color_span">{eyou:field name='seo_description' /}</span>-->
+	         <div class="title_line"></div>
+	          <div class="title_eng">
+	         		Fuze Advantage
+	          </div>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+    	<div style="width: 100%; height: auto;">
+    <img style="max-width:100%;" src="{eyou:global name='web_attr_6' /}" />
+    </div>
+    </div>
+	<!--新闻资讯-->
+	 <!-- 新闻资讯 start zhanghaijing20160623 --> 
+	   <!--第五部分开始--> 
+	   <div class="container  hidden-xs-down" style="margin-bottom: 60px; margin-top: 50px;">  
+	   {eyou:channelartlist typeid='2'}  
+	    <section style="height: 500px;" class="chanpin " > 
+	     <div class=" bodyha"> 
+	      <div class=" bodyha bxywu"> 
+	       <div class="bxywun"> 
+	     
+			<div class="li-div">
+			  <div class="not-animated w-text" data-animate="" style="">
+			    <div class="w-title w-title1">
+			      <div class="w-title-in">
+			        <div class="w-title-inner">
+			          <div class="title-h-in">
+			            <h1 class="color_main color_h">{eyou:field name='typename' /}</h1>
+			            <!--<span class="color_vice color_span">{eyou:field name='seo_description' /}</span>-->
+			         <div class="title_line"></div>
+			          <div class="title_eng">
+			         		{eyou:field name='englist_name' /}
+			          </div>
+			          </div>
+			        </div>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+	        <div class="bxywu3"> 
+	         <ul> 
+			 	{eyou:type typeid='10'}
+	          <li class="on" style="padding: 5px 10px;border:1px solid #f65607; width: 112px; text-align: center;cursor:pointer; ">{$field.typename}</li> 
+			  	{/eyou:type}
+	       {eyou:type typeid='11'}
+	       <li class="" style="padding: 5px 10px;border:1px solid #f65607; width: 112px; text-align: center;cursor:pointer; ">{$field.typename}</li>
+	       {/eyou:type}
+	      {eyou:type typeid='12'}
+	      <li class="" style="padding: 5px 10px;border:1px solid #f65607; width: 112px; text-align: center;cursor:pointer; ">{$field.typename}</li>
+	      {/eyou:type}
+	         </ul> 
+			 	
+	         <dl> 
+	          <!--切换重复开始--> 
+	          <dd> 
+			  {eyou:arclist titlelen='50' limit='0,1' typeid='10' infolen='60'}
+	           <div class="dd1"> 
+	            <div class="dd11">
+	             <a href="{$field.arcurl}" title="{$field.title}" alt="{$field.title}"><img src="{$field.litpic}"></a>
+	            </div> 
+	            <div class="dd12">
+	             <span><i>{$field.add_time|MyDate='d',###}</i>{$field.add_time|MyDate='Y-m',###}</span> 
+	             <h1><a href="{$field.arcurl}" title="{$field.title}" alt="{$field.title}">{$field.title}</a></h1> 
+	            </div> 
+	            <div class="dd13">
+					{$field.seo_description|html_msubstr=###,0,40,true}...
+	            </div> 
+	           </div> 
+			     	{/eyou:arclist}
+	           <div class="dd2"> 
+	            <p> 
+				{eyou:arclist titlelen='20' limit='1,7' typeid='10' infolen='60'} 
+				<span><a href="{$field.arcurl}" title="{$field.title}" alt="{$field.title}"><i><b> {$field.add_time|MyDate='d',###}</b> {$field.add_time|MyDate='Y-m',###}</i><strong>{$field.title}</strong><em> {$field.seo_description|html_msubstr=###,0,55,true}...</em></a></span> 
+				{/eyou:arclist}
+				  </p> 
+	           </div> 
+			 
+	          </dd> 
+	          <!--切换重复结束--> 
+	          <!--切换重复开始--> 
+	          <dd style="display: none;"> 
+			    {eyou:arclist titlelen='40' limit='0,1' typeid='11' infolen='60'}
+	           <div class="dd1">
+	            <div class="dd11">
+	             <a href="{$field.arcurl}" title="{$field.title}" alt="{$field.title}"><img src="{$field.litpic}"></a>
+	            </div> 
+	            <div class="dd12">
+	             <span><i>{$field.add_time|MyDate='d',###}</i>{$field.add_time|MyDate='Y-m',###}</span> 
+	             <h1><a href="{$field.arcurl}" title="{$field.title}" alt="{$field.title}">{$field.title}</a></h1> 
+	            </div> 
+	            <div class="dd13">
+	           				{$field.seo_description|html_msubstr=###,0,50,true}...
+	            </div> 
+	           </div> 
+	             	{/eyou:arclist}
+	           <div class="dd2"> 
+	            <p> 
+	           			{eyou:arclist titlelen='20' limit='1,7' typeid='11' infolen='60'} 
+	           			<span><a href="{$field.arcurl}" title="{$field.title}" alt="{$field.title}"><i><b> {$field.add_time|MyDate='d',###}</b> {$field.add_time|MyDate='Y-m',###}</i><strong>{$field.title}</strong><em> {$field.seo_description|html_msubstr=###,0,55,true}...</em></a></span> 
+	           			{/eyou:arclist}
+	           			  </p> 
+	           </div> 
+	          </dd> 
+	          <!--切换重复结束--> 
+	          <!--切换重复开始--> 
+	          <dd style="display: none;"> 
+			   {eyou:arclist titlelen='40' limit='0,1' typeid='12' infolen='60'}
+	        <div class="dd1">
+	         <div class="dd11">
+	          <a href="{$field.arcurl}" title="{$field.title}" alt="{$field.title}"><img src="{$field.litpic}"></a>
+	         </div> 
+	         <div class="dd12">
+	          <span><i>{$field.add_time|MyDate='d',###}</i>{$field.add_time|MyDate='Y-m',###}</span> 
+	          <h1><a href="{$field.arcurl}" title="{$field.title}" alt="{$field.title}">{$field.title}</a></h1> 
+	         </div> 
+	         <div class="dd13">
+	        				{$field.seo_description|html_msubstr=###,0,50,true}...
+	         </div> 
+	        </div> 
+	          	{/eyou:arclist}
+	        <div class="dd2"> 
+	         <p> 
+	        			{eyou:arclist titlelen='20' limit='1,7' typeid='12' infolen='60'} 
+	        			<span><a href="{$field.arcurl}" title="{$field.title}" alt="{$field.title}"><i><b> {$field.add_time|MyDate='d',###}</b> {$field.add_time|MyDate='Y-m',###}</i><strong>{$field.title}</strong><em> {$field.seo_description|html_msubstr=###,0,55,true}...</em></a></span> 
+	        			{/eyou:arclist}
+	        			  </p> 
+	        </div> 
+	          </dd> 
+	          <!--切换重复结束--> 
+	         </dl> 
+	         <script type="text/javascript">
+	                 jQuery(".bxywu3").slide({ titCell:"ul li",mainCell:"dl",delayTime:0,triggerTime:0 });
+	         </script> 
+	        </div> 
+	       </div> 
+	      </div> 
+	     </div> 
+	    </section>
+			{/eyou:channelartlist}
+	   </div> 
+	
+   
+
+ 
+
+  
+  {eyou:include file="footer.htm" /} </div>
+<div class="topTel" onclick="$('body,html').animate({scrollTop: 0}, 500);"><i class="fa fa-arrow-up"></i></div>
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.global.js"></script> 
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.form.js"></script> 
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/lightbox.min.js"></script> 
+<script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.custom.js"></script>
+</body>
+</html>

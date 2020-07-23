@@ -1,0 +1,228 @@
+<div class="w-section "> 
+      <div class="row" >
+        <div class="row-mask" ></div>
+        <div class="wrap-content-in  ">
+          <div class="li-div">
+            <div class="w-space space-b noChoose"  style="height:30px;">
+              <div class="stretch-b"></div>
+            </div>
+          </div>
+          <div class="li-div">
+            <div class="not-animated w-text" data-animate="" style="">
+              <div class="w-title w-title1">
+                <div class="w-title-in">
+                  <div class="w-title-inner">
+                    <div class="title-h-in">
+                      <h2 class="color_main color_h">{eyou:field name='typename' /}</h2>
+                      <span class="color_vice color_span">{eyou:field name='seo_description' /}</span>
+                      <div class="simpline bg_simpline"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="li-div">
+            <div class="w-space space-b noChoose"  style="height:45px;">
+              <div class="stretch-b"></div>
+            </div>
+          </div>
+          <div class="li-div"  onselectstart="return false" style=" -moz-user-select: none;">
+            <div class="not-animated w-adNews w-adNews2" data-animate="" style="">
+              <div class="w-adNews-in clearfix">
+                <ul>
+                 {eyou:arclist row='8' titlelen='30' mod='4'}
+                  <li {eyou:eq name='$mod' value='0'}class="li-right"{/eyou:eq}>
+                    <div class="news-item">
+                      <div class="news-imgbox" style="border: 3px solid #CCCCCC;"><a class="img-count w-news-img" href="{$field.arcurl}" >
+                        <div class="aspectRatio" style="padding-bottom:75%;"></div>
+                        <div class="img-count-in"><img src="{$field.litpic}"></div>
+                        </a></div>
+                      <div class="news-com">
+                        <div class="news-h" style="text-align: center;"><a  href="{$field.arcurl}"  title="{$field.title}">{$field.title}</a></div>
+                      </div>
+                    </div>
+                  </li>
+                  {/eyou:arclist}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="li-div">
+            <div class="w-button"  style="text-align:center;padding-top:20px;padding-bottom:20px;">
+              <div class="btn-default-b btn-default-w btn-large-w g-click-to-link" onclick="window.open('{eyou:field name='typeurl' /}','_self')"> <span class="btn-inner" style="">查看更多</span> </div>
+              <a style="display:none;" href="{eyou:field name='typeurl' /}" ><span></span></a> </div>
+          </div>
+          <div class="li-div">
+            <div class="w-space space-b noChoose"  style="height:60px;">
+              <div class="stretch-b"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      
+
+
+
+<div class="w-section "> 
+      <div class="row" >
+        <div class="row-mask" ></div>
+        <div class="wrap-content-in  ">
+          <div class="li-div">
+            <div class="w-space space-b noChoose"  style="height:30px;">
+              <div class="stretch-b"></div>
+            </div>
+          </div>
+          <div class="li-div">
+            <div class="not-animated w-text" data-animate="" style="">
+              <div class="w-title w-title1">
+                <div class="w-title-in">
+                  <div class="w-title-inner">
+                    <div class="title-h-in">
+                      <h2 class="color_main color_h">{eyou:field name='typename' /}</h2>
+                      <span class="color_vice color_span">{eyou:field name='seo_description' /}</span>
+                      <div class="simpline bg_simpline"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+            </div>
+         </div>
+  <div id="wrap_index">
+  <div class="section1">
+    <div class="content1"> {eyou:channelartlist typeid='2'}
+      <div class="container">
+        <div class="slideGroup block" data-move-y="200px" data-move-x="0px" style="opacity: 1; ">
+          <div class="parHd">
+            <ul>
+              {eyou:channel row="7" type ='son'}
+              <li class="{eyou:eq name='$i' value='1'}on{/eyou:eq}">{$field.typename}</li>
+              {/eyou:channel}
+            </ul>
+          </div>
+          <div class="parBd"> 
+          {eyou:channel row="7" type ='son' key='i'}
+            <div class="swiper-container sect1_swiper {eyou:eq name='$i' value='1'}show1{/eyou:eq}">
+              <div class="swiper-wrapper"> 
+              {eyou:arclist  typeid='$field.typeid' row='8' titlelen='20' infolen='22'}
+                <div class="swiper-slide"> <a href="{$field.arcurl}">
+                  <div class="wrapli"><img src="{$field.litpic}">
+                    <div class="mark1"><em>查看更多</em></div>
+                  </div>
+                  <div class="tt1">{$field.title}</div>
+                  </a> </div>
+                {/eyou:arclist} 
+                </div>
+               </div>
+            {/eyou:channel} 
+            </div>
+        </div>
+      </div>
+      {/eyou:channelartlist} </div>
+  </div>
+ 
+</div>
+
+
+
+<div class="w-container w-main">
+    <div class="row">
+      <div class="wrap-content-in w-system w-productcom">
+        <div class="w-system-in"> 
+          
+          <!--产品列表分类-->
+          <div class="w-com-menu w-com-menu-H">
+            <div class="w-com-menu-in">
+              <div class="systitle">
+                <div class="systitle-in">{$eyou.field.typeid|gettoptype=###,'typename'}</div>
+                <i class="fa icon_menuControl"></i></div>
+              <ul class="ul-parent">
+                {eyou:channel type="first" currentstyle="cur"}
+                <li class="li-parent {$field.currentstyle}">
+                  <div class="div-parent"> <a href="{$field.typeurl}">{$field.typename}</a><span class="menu_simpline_cur"></span></div>
+                </li>
+                {/eyou:channel}
+              </ul>
+            </div>
+          </div>
+          
+          <!--产品列表分类 end--> 
+          
+          <!--产品列表-->
+          <div class="">
+            <style type="text/css">
+        .w-prd-list1 .w-prd-list-cell{ width:24.99%; *width:24.98%;}
+    </style>
+            <div class="crumbs">
+              <div class="crumbs_in">您当前的位置: {eyou:position style="crumb" /}</div>
+            </div>
+            <div class="w-prd-list w-prd-list1 prd_imgScaleBig">
+              <div class="w-prd-list-in clearfix"> {eyou:list pagesize="8" titlelen="20"}
+                <div class="w-prd-list-cell">
+                  <div class="w-prd-list-cell-in">
+                    <div class="w-prd-con">
+                      <div class="w-prd-imgbox" title="{$field.title}"> <a  href="{$field.arcurl}" class="img-count w-prd-img">
+                        <div class="aspectRatio" style="padding-bottom:100%"></div>
+                        <div class="img-count-in"><img alt="{$field.title}" src="{$field.litpic}" /></div>
+                        </a> </div>
+                      <div class="w-prd-infobox"  style="text-align:left">
+                        <h2 class="w-prd-name" title="{$field.title}"> <a  href="{$field.arcurl}">{$field.title}</a> </h2>
+                        <div class="w-prd-sum">{$field.seo_description}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/eyou:list} </div>
+            </div>
+            <div class="next1"> {eyou:pagelist listitem='index,pre,pageno,next,end' listsize='2' /}</div>
+          </div>
+          
+          <!--产品列表 end--> 
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+<div class="product-detail-images">
+                  <div class="product-detail-images-in"> 
+                    <!-- 放大镜效果的style样式 -->
+                    <style type="text/css">
+    .class-zoom{
+        border:1px solid #DEDEDE;
+        background-color:#FFFFFF;
+        display:none;
+        opacity: .75; /* Standard: FF gt 1.5, Opera, Safari */
+        filter: alpha(opacity=75); /* IE lt 8 */
+        -ms-filter: "alpha(opacity=75)"; /* IE 8 */
+        -khtml-opacity: .75; /* Safari 1.x */
+        -moz-opacity: .75; /* FF lt 1.5, Netscape */
+    }
+    .class-zoom-img{
+        border:1px solid #DEDEDE;
+    }
+</style>
+                    <script type="text/javascript" src="{eyou:global name='web_templets_pc' /}/skin/js/jquery.magnifier.js"></script>
+                    <div class="product-detail-image-big">
+                      <div class="magnifier"></div>
+                      {eyou:volist name="$eyou.field.image_list" row='1'} <img class="default-image g-cover" data-imageid="{$i}" src="{$field.image_url}" data-zoom="true"/> {/eyou:volist} </div>
+                    <div class="product-detail-image-small">
+                      <div class="imgsmall-pre disabled"></div>
+                      <div class="imgsmall-next"></div>
+                      <!--disabled-->
+                      <div class="small-list">
+                        <div class="iamge-slide"> {eyou:volist name="$eyou.field.image_list"} <a class="img-count img-small-item cur" href="javascript:void(0);" data-imageid="{$i}">
+                          <div class="cur-top" style="display:none;"></div>
+                          <div class="aspectRatio"></div>
+                          <div class="img-count-in img-small-item-in"><img class="g-cover" src="{$field.image_url}"/> </div>
+                          </a> {/eyou:volist} </div>
+                      </div>
+                    </div>
+                    <div style="display:none;"> {eyou:volist name="$eyou.field.image_list"} <a data-lightbox="image-{$i}" href="{$field.image_url}"> <span id="imageid{$i}"></span> </a> {/eyou:volist} </div>
+                  </div>
+                </div>

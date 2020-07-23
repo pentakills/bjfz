@@ -1,0 +1,65 @@
+	<div class="top" style="height: 38px;line-height: 38px;overflow: hidden;">
+	    <div class="g_cw clearfix" style="    width: 1120px;padding: 0 10px;margin: 0 auto;">
+	          <p class="left" style="float: left;color: #f65607;font-weight: 700;font-size: 16px;">{eyou:global name='web_attr_5' /}</p>
+	          <p class="right" style="float: right;color: #f65607;"><a href="" target="_blank"><img src="template/default/pc/skin/img/alibb.png"   /></a> &nbsp;&nbsp;<span style="color: #f65607;font-weight: 700;font-size: 16px;">咨询热线：<b>{eyou:global name='web_attr_1' /}</b></span></p>
+	        </div>
+	  </div>
+<div class="w-container w-header top-nav " style="background-color: #f65607;">
+  <div class="row clearfix">
+    <div class="mobile-nav-toggle"><i class="fa fa-navicon fa-2x"></i></div>
+    <div class="nav_right_mask"></div>
+    <div class="col-logo">
+      <div class="w-logo">
+        <h1 style="display:none;"><a href="{eyou:global name='web_cmsurl' /}/"></a></h1>
+        <a  href="{eyou:global name='web_cmsurl' /}/"  class="w-logo-img"  > <img src="{eyou:global name='web_logo' /}"/> </a> </div>
+    </div>
+    <div class="col-right clearfix">
+      <div class="w-nav g-active-add">
+        <div class="w-nav-in">
+          <ul class="nav_inner clearfix" id="g-web-ul-menu" style="display:none;">
+            <li  class=""><a href = "{eyou:global name='web_cmsurl' /}/" >网站首页</a><i class="nav_simpline_cur"></i></li><!--{eyou:eq name='$Think.const.CONTROLLER_NAME' value='Index'}active{/eyou:eq}-->
+            {eyou:channel type="top" row="20" id="field" currentstyle="active"}
+            <li  class="{$field.currentstyle}">
+              <div class="li-parent-div li-parentOne-div"><a href = "{$field.typeurl}">{$field.typename}
+                {eyou:notempty name="$field.children"}<i class="fa fa-plus"></i>{/eyou:notempty} </a></div>
+              <i class="nav_simpline_cur"></i> {eyou:notempty name="$field.children"}
+              <div class="submenu">
+                <div class="back-div"><i class="fa fa-angle-left"></i><span>返回</span></div>
+                <ul>
+                  {eyou:channel name="$field.children" row="20" id="field2"}
+                  <li><a href = "{$field2.typeurl}">{$field2.typename}</a></li>
+                  {/eyou:channel}
+                </ul>
+              </div>
+              {/eyou:notempty} </li>
+            {/eyou:channel}
+            <div class="nav_moveBox"></div>
+          </ul>
+        </div>
+      </div>
+      <div class="topLogBox">
+        <div class="topLogBox-in">
+          <div class="col-com"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    $(function(){
+        var banOffTop=$(".top-nav").offset().top;//获取到距离顶部的垂直距离
+        var scTop=0;//初始化垂直滚动的距离
+        $(document).scroll(function(){
+            scTop=$(this).scrollTop();//获取到滚动条拉动的距离
+         //   console.log(scTop);//查看滚动时，垂直方向上，滚动条滚动的距离
+            if(scTop>=banOffTop){
+            //核心部分：当滚动条拉动的距离大于等于导航栏距离顶部的距离时，添加指定的样式
+                $(".top-nav").addClass("navbar-fixed-top");
+            }else{
+                $(".top-nav").removeClass("navbar-fixed-top");
+            }
+
+        })
+    })
+</script>
+
